@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/081c4004bc.js" crossorigin="anonymous"></script>
+    <title>navbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- <i class="fa-solid fa-gear"></i> -->
+        <font-awesome-icon icon="fa-solid fa-gear" />
+        <nav>
+            <div class="hamburger" onclick="ham()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="logo">
+                <a href="index.htm"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Windows_Settings_app_icon.png/640px-Windows_Settings_app_icon.png" class="logo_img" alt=""></a>
+            </div>
+            <ul class="nav_items">
+                <i class="fa-solid fa-magnifying-glass"></i> <input  type="text"  class="poisk" placeholder="search"  >
+                <li class="nav_item">Dashboard</li>
+                <li class="nav_item"><i class="fa-solid fa-user"></i> user</li>
+                <li class="nav_item"><i class="fa-solid fa-message"></i> Message</li>
+                <li class="nav_item"><i class="fa-solid fa-chart-simple"></i> analitic</li>
+                <li class="nav_item"><i class="fa-solid fa-file"></i> file menag</li>
+                <li class="nav_item"><i class="fa-solid fa-sort"></i> order</li>
+                <li class="nav_item"><i class="fa-solid fa-floppy-disk"></i> saved</li>
+                <li class="nav_item"> <i class="fa-solid fa-gear"></i> setting</li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        let hambur = document.querySelector('.hamburger');
+        let nav = document.querySelector('.nav_items')
+        let nav_item = document.querySelectorAll('.nav_item')
+        function ham(){nav.classList.toggle('slide_ham'); nav_item.forEach(element=>{
+            element.classList.toggle('nav_item_active');
+        })}
+    </script>
+</body>
+</html>
